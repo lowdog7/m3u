@@ -1,0 +1,22 @@
+/etc/systemd/system/service
+
+
+
+[Unit]
+Description=    NAME
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=             USER
+ExecStart=        LOCATION  
+StartLimitBurst=5
+StartLimitIntervalSec=60
+
+[Install]
+WantedBy=multi-user.target
+
+systemctl start service
+systemctl enable service
