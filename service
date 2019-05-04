@@ -1,17 +1,16 @@
-/etc/systemd/system/    NAME
-
-
+/etc/systemd/system/NAME
+chmod 
 
 [Unit]
-Description=    NAME
+Description=
 After=network.target
 StartLimitIntervalSec=0
 [Service]
 Type=simple
 Restart=always
 RestartSec=5
-User=             USER
-ExecStart=        LOCATION  
+User=USER
+ExecStart=LOCATION
 StartLimitBurst=5
 StartLimitIntervalSec=60
 
